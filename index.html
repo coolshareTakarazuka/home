@@ -41,7 +41,26 @@
    <input id="gift" type="radio" name="tab_item" aria-label="地区" />
  <label class="tab_item" for="gift">景品</label>
 
- 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+<!-- PapaParse を読み込む -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+<script>
+  fetch("https://docs.google.com/spreadsheets/d/167qKSk3a2gE7NSBXg4ezW8DW7U3h4R4wSe-KPudBcpE/gviz/tq?tqx=out:csv")
+    .then((response) => response.text())
+    .then((csvText) => {
+      const parsedData = Papa.parse(csvText, { header: true });
+      const storeData = parsedData.data;
+
+      // A2セルの値（spot2列の1行目の値）を取得
+      const spot = storeData[0]?.spot2 || "不明";
+
+      // HTMLのpClass2の中身を置き換える
+      const spotText = `今年は、宝塚市内の、${spot}箇所にスタンプラリー設置！！<br />たくさんスタンプを集めて特典をゲットしよう！！<br />`;
+      document.querySelector(".pClass2").innerHTML = spotText;
+    });
+</script>
 
    <div class="tab_content" id="home_content">
        <div class="tab_content_description">
@@ -57,8 +76,7 @@
                 宝塚のお店や企業、施設に涼みに行ってみませんか？
               </p>
               <p class="pClass2">
-                今年は、宝塚市内の、〇〇箇所にスタンプラリー設置！！<br />
-                たくさんスタンプを集めて特典をゲットしよう！！<br />
+                読み込み中
               </p>
               <p class="pClass3">スタンプラリー期間：2025/7/1(火)〜2025/9/30(火)</p>
               
