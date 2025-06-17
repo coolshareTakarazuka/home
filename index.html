@@ -35,13 +35,13 @@
     
 
 <div  class="tabs">
-   <input id="home" type="radio" name="tab_item" aria-label="ホーム"　checked/>
+   <input id="home" type="radio" name="tab_item" aria-label="ホーム" checked/>
  <label class="tab_item" for="home">ホーム</label>
 
  <input id="question" type="radio" name="tab_item" aria-label="質問" />
  <label class="tab_item" for="question">質問</label>
 
-   <input id="gift" type="radio" name="tab_item" aria-label="景品"  />
+   <input id="gift" type="radio" name="tab_item" aria-label="地区"  />
  <label class="tab_item" for="gift">景品</label>
 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
@@ -761,31 +761,198 @@
                 }
               </style>
 
-              <h2>景品応募・当選の流れ</h2>
+<h2>景品応募の流れ</h2>
+
+<div class="stepbar">
+  <div class="stepbarwrap">
+    <div class="steptitle">
+      <div class="stepcircle content">
+        <span>STEP<br />1</span>
+      </div>
+      <p class="title">①景品を選ぶ</p>
+    </div>
+    <div class="steptxt">
+      <span class="txt">🎁 お好きな景品を全てお選びください</span>
+    </div>
+    <span class="stepline"></span>
+  </div>
+
+  <div class="stepbarwrap">
+    <div class="steptitle">
+      <div class="stepcircle content">
+        <span>STEP<br />2</span>
+      </div>
+      <p class="title">②名前 ③住所 ④連絡先を入力</p>
+    </div>
+    <div class="steptxt">
+      <span class="txt"
+        >景品当選時の発送する際に必要となります。<br />その他の目的では使用しません</span
+      >
+    </div>
+    <span class="stepline"></span>
+  </div>
+
+  <div class="stepbarwrap">
+    <div class="steptitle">
+      <div class="stepcircle content">
+        <span>STEP<br />3</span>
+      </div>
+      <p class="title">景品に応募</p>
+    </div>
+    <div class="steptxt">
+      <span class="txt"
+        >スタンプが8個たまるごとに、好きな景品に応募できます。<br />たくさん集めて何度でも応募しよう！<br>応募すればするほど当選確率UP!!</span
+      >
+    </div>
+    <span class="stepline"></span>
+  </div>
+
+  <div class="stepbarwrap">
+    <div class="steptitle">
+      <div class="stepcircle content2">
+        <span>STEP<br />4</span>
+      </div>
+      <p class="title">
+        10/24(金) 18:00〜<br />
+        <i class="fa-brands fa-youtube youtubeicon"></i> YouTube
+        Liveにて<br>当選発表
+      </p>
+    </div>
+    <div class="steptxt">
+      <span class="txt"><h2 class="youtube">10月24日(金) 18:00〜<br> <i class="fa-brands fa-youtube youtube"></i> YouTubeLIVEにて当選発表を行います！！</h2>
+        <a href="https://www.youtube.com/live/5Upxrb2dxRc?feature=shared" target="_blank" class="youtube"><i class="fa-brands fa-youtube youtube2" target="_blank"></i> YouTube LIVE ここから</a><br><br></span>
+    </div>
+    <span class="stepline"></span>
+  </div>
+
+  <div class="stepbarwrap">
+    <div class="steptitle">
+      <div class="stepcircle content3">
+        <span>STEP<br />5</span>
+      </div>
+      <p class="title">
+        《🎉 当選の場合》<br />
+        <i class="fa-brands fa-line lineicon"></i>
+        ご登録のLINEに<br />メッセージをお送りします
+      </p>
+    </div>
+    <div class="steptxt">
+      <span class="txt"
+        >メッセージのURLから送り先の住所をご確認ください</span
+      >
+    </div>
+    <span class="stepline"></span>
+  </div>
+
+  <div class="stepbarwrap">
+    <div class="steptitle">
+      <div class="stepcircle content3">
+        <span>STEP<br />6</span>
+      </div>
+      <p class="title">
+        《🎉 当選の場合》<br />
+        住所宛に景品を送付します！！
+      </p>
+    </div>
+    <div class="steptxt">
+      <span class="txt"></span>
+    </div>
+    <span class="stepline"></span>
+  </div>
+</div>
+
+<style>
+  .stepbar {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .stepbar .stepbarwrap {
+    margin: 2em 0;
+    position: relative;
+  }
+
+  .stepbar .stepbarwrap .steptitle {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .stepbar .stepbarwrap .steptitle .stepcircle {
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    content: "";
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+  }
+
+  .stepbar .stepbarwrap .steptitle .stepcircle span {
+    display: inline-block;
+    line-height: 1.2em;
+    font-size: 0.8em;
+    font-weight: bold;
+    position: relative;
+    top: 0.9em;
+  }
+
+  .stepbar .stepbarwrap .steptitle .title {
+    margin: 0.5em;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: sans-serif !important;
+  }
+
+  .stepbar .stepbarwrap .steptxt {
+    padding-left: 3.5em;
+  }
+
+  .stepbar .stepbarwrap .steptxt .txt {
+    font-size: 12px;
+    font-family: sans-serif !important;
+  }
+
+  .stepbar .stepbarwrap .stepline {
+    width: 1px;
+    height: calc(100% + 2em);
+    background-color: #000 ;
+    position: absolute;
+    top: 1em;
+    left: 1.5em;
+    z-index: -1;
+  }
+
+  .stepbarwrap:last-of-type .stepline:last-of-type {
+    display: none;
+  }
+
+
+
+  i.lineicon {
+    color: #06c755;
+  }
+
+  i.youtubeicon {
+    color: #ff0000;
+  }
+
+  div.content {
+    background-color: orange !important;
+  }
+
+  div.content2 {
+    background-color: #ff0000 !important;
+  }
+
+  div.content3 {
+    background-color: blue !important;
+  }
+
+</style>
+
+
               
-              <h3>景品応募</h3>
-              <ol>
-                <li>８スタンプ獲得ごとに景品に何度も応募可能！！</li>
-                <li>当選した場合の景品発送に必要なご住所をお伺いします。 </li>
-                    💡ご提供いただいた情報は、景品の発送以外の目的では使用いたしません。
-                
-                <li>応募の際は、同じ景品に何度でも応募できます。</li>
-                💡応募1回ごとに1口として抽選に反映されるため、応募すればするほど当選確率がアップ！
-
-
-              </ol>
-            <h3>景品当選</h3>
-            
-            <h2 class="youtube">10月24日(金) 18:00〜<br> <i class="fa-brands fa-youtube youtube"></i> YouTubeLIVEにて当選発表を行います！！</h2>
-            <a href="https://www.youtube.com/live/5Upxrb2dxRc?feature=shared" class="youtube"><i class="fa-brands fa-youtube youtube2" target="_blank"></i> YouTube LIVE ここから</a><br><br>
-                
-                《当選の場合》
-                <ol>
-                <li>ご登録いただいているLINEに公式アカウントより当選メッセージをお送りします</li>
-                <li>当選メッセージのURLより住所の確認をお願いいたします。</li>
-                💡当選されても住所の確認ができないとお送りできない場合があります。
-                <li>ご登録のご住所に景品をお送りします！</li>
-                </ol>
            </p>
        </div>
    </div>
